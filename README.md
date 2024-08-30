@@ -22,3 +22,5 @@ It's my website that i've started to code as pet project. So that's actually my 
   python main.py
   ```
 </ul>
+
+## Should i re-write it in Sveltekit?🤔 Maybe

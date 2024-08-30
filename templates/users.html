@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% block stylesheet %}
+<!--Extra stylesheet-->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/users.css') }}">
+{% endblock %}
+
+{% block headertitle %}
+Users
+{% endblock %}
+
+{% block mainpart %}
+<!-- Main -->
+
+<span id='connected-users-text' data-text="Logged users: {{users |length}}"></span>
+<ul id='main'>
+  {% for user in users %}
+  <li class='user-frame' id="{{user.user_id}}" onclick="window.open('/user/{{user.user_id}}','_self')">
+    <img class='user-icon' src="{{user.user_icon}}">
+    <span class='user-nick' data-text="{{user.user_nick}}"></span>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
+
+{% block scripts %}
+<!--Extra scripts-->
+<script src="{{ url_for('static',filename='js/users.js')}}"></script>
+
+{% endblock %}

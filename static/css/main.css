@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+[data-text]::after {
+  content: attr(data-text);
+}
+
+body {
+  width:100vw;
+}
+
+html {
+  width:100vw;
+}
+
+
+.loader-container {
+  position:absolute;
+  z-index:99;
+  top:0;
+  left:0;
+
+  width:100vw;
+  height:100vh;
+  
+  opacity:1;
+  visibility:visible;
+  background:#000;
+}
+
+.done {
+  transition: all 0.5s ease-out;
+
+  z-index:-1;
+  top:0;
+  left:0;
+  
+  opacity:0;
+  visibility:hidden;
+}
+
+.loader {
+  position: absolute;
+  top: calc(50% - 2.5em);
+  left: calc(50% - 2.5em);
+  
+  width: 5em;
+  height: 5em;
+  
+  transform: rotate(165deg);
+  
+}
+
+.loader:before, .loader:after { 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  
+  width: 1em;
+  height: 1em;
+  
+  border-radius: 0.5em;
+
+  content: "";
+  
+  transform: translate(-50%, -50%);
+}
+
+.loader:before {
+  animation: before8 2s infinite;
+}
+
+.loader:after {
+  animation: after6 2s infinite;
+}
+
+@keyframes before8 {
+ 0% {
+  width: 1em;
+  box-shadow: 2em -01em rgba(225, 20, 98, 0.75), -2em 1em rgba(111, 202, 220, 0.75);
+ }
+
+ 35% {
+  width: 5em;
+  box-shadow: 0 -1em rgba(225, 20, 98, 0.75), 0 1em rgba(111, 202, 220, 0.75);
+ }
+
+ 70% {
+  width: 1em;
+  box-shadow: -2em -1em rgba(225, 20, 98, 0.75), 2em 1em rgba(111, 202, 220, 0.75);
+ }
+
+ 100% {
+  box-shadow: 2em -1em rgba(225, 20, 98, 0.75), -2em 1em rgba(111, 202, 220, 0.75);
+ }
+}
+
+@keyframes after6 {
+ 0% {
+  height: 1em;
+  box-shadow: 1em 2em rgba(61, 184, 143, 0.75), -1em -2em rgba(233, 169, 32, 0.75);
+ }
+
+ 35% {
+  height: 5em;
+  box-shadow: 1em 0 rgba(61, 184, 143, 0.75), -1em 0 rgba(233, 169, 32, 0.75);
+ }
+
+ 70% {
+  height: 1em;
+  box-shadow: 1em -2em rgba(61, 184, 143, 0.75), -1em 2em rgba(233, 169, 32, 0.75);
+ }
+
+ 100% {
+  box-shadow: 1em 2em rgba(61, 184, 143, 0.75), -1em -2em rgba(233, 169, 32, 0.75);
+ }
+}
+
+
+#header {
+  transition: all 0.2s ease-out;
+  
+  position:absolute;
+  z-index:97;
+  top:0;
+  left:0;
+  margin-bottom: 1%;
+  
+  width: 100%;
+  height: 100px;
+  
+  text-align: center;
+  font: 50px "Lilita One";
+  color: #ffffff;
+  line-height: 100px;
+  
+  border-bottom: 4px solid silver;
+  
+  background: #333;
+  box-shadow: 0 0 10px #000;
+
+  &:hover {
+    transition: all 0.2s ease-out;
+    background: #444;
+    box-shadow: 0 0 30px #000;
+  }
+}
+
+#discord-login-button {
+  transition: all 0.1s ease-out;
+  
+  position:absolute;
+  top:23px;
+  right:0;
+  
+  width:15%;
+  height:50px;
+  
+  font: 1.5vw/1vh "Lilita One";
+  color:#fff;
+  
+  border: 4px solid silver;
+  border-radius: 30px;
+  
+  background: #484cd9;
+  box-shadow: 0 0 4px #000;
+
+  &:hover{
+    transition: all 0.1s ease-out;
+
+    width:20%;
+    
+    background: #4a4db0;
+    box-shadow: 0 0 20px #000;
+  }
+}
+
+
+#menu {
+  transition: all 0.2s ease-out;
+  
+  position:absolute;
+  z-index:98;
+  top:0;
+  left:calc(-15svw - 4px);
+  
+  width: 15vw;
+  height: 100vh;
+  
+  border-right: 4px solid silver;
+
+  background:#fff;
+  box-shadow: 0 0 0 #000;
+
+  &:hover {
+    transition: all 0.2s ease-out;
+
+    left:0;
+    
+    box-shadow: 0 0 10vh #000; 
+  }
+
+  &:hover .page-mark {
+    transition: all 0.2s ease-out;
+    
+    right:calc((5vw - 8px)/2);
+    top:6px;
+
+    width:10vw;
+
+    color:white;
+    
+    border-radius: 40px;
+    border-left: 4px solid silver;
+    
+    background: #333;
+  }
+
+  &:hover .page-mark:hover {
+    transition: all 0.2s ease-out;
+
+    top:10px;
+    
+    background: #444;
+    box-shadow: 0 0 20px #000;
+  }
+}
+
+.page-mark {
+  transition: all 0.2s ease-out;
+  
+  position:absolute;
+  top:6px;
+  right:-204px;
+  
+  width:200px;
+  height:80px;
+  
+  color:black;
+  font: 30px "Lilita One";
+  text-align: center;
+  line-height: 80px;
+  
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border-top: 4px solid silver;
+  border-bottom: 4px solid silver;
+  border-right: 4px solid silver;
+  
+  background:#fff;
+  visibility:visible;
+}
+
+.menu-button {
+  transition: all 0.2s ease-out;
+  
+  position:absolute;
+  left: 1vw;
+  margin: 1% 0;
+
+  width: 13vw;
+  height: 8vh;
+  
+  text-align: center;
+  font: 3vmin "Lilita One";
+  color: #black;
+  line-height: 8vh;
+  
+  cursor: pointer;
+
+  &:hover {
+    transition: all 0.2s ease-out;
+    
+    color:white;
+    
+    border-radius: 30px;
+    
+    box-shadow: 0 0 20px #000;
+    background: #333;
+  }
+}
+
+.creator-page {
+  top:15vh;
+}
+
+.acount-page {
+  top:25vh;
+}
+
+.community-page {
+  top:35vh;
+}
+
+.users-page {
+  top:45vh;
+}
+
+.entertainment-page {
+  top:55vh;
+}
+
+.extra-page {
+  top:65vh;
+}
+
+
+#user-frame {
+  transition: all 0.3s ease-out;
+  
+  position:absolute;
+  top:0;
+  right:0;
+  
+  width:90vw;
+  height:100px;
+
+  cursor: pointer;
+  
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+
+  &:hover {
+    transition: all 0.3s ease-out;
+    background:#2f2f2f;
+    box-shadow: 0 0 40px #fff;
+  }
+}
+
+#user-avatar {
+  position:absolute;
+  top:15px;;
+  right:15px;
+  
+  width:70px;
+  height:70px;
+
+  user-select:none;
+  
+  border-radius:50%;
+}
+
+#user-name {
+  position:absolute;
+  right:100px;
+  top:10px;
+  
+  font-size: 20px;
+}
+
+#user-nick {
+  position:absolute;
+  right:100px;
+  top:-15px;
+  
+  font-size: 30px;
+}

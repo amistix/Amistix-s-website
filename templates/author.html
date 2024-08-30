@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+
+{% block stylesheet %}
+<!--Extra stylesheet-->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/author.css') }}">
+{% endblock %}
+
+{% block headertitle %}
+Author
+{% endblock %}
+
+{% block mainpart %}
+<!--Main Frame-->
+<div id='author-main-frame'>
+  <img id='author-image' src="{{ url_for('static', filename='images/moxxie.jpg') }}">
+  <div id='author-name'>Amistix</div>
+  <div id='real-author-name'>Tysh Nazarii Maksymovych</div>
+  <div style='display:none;'>Сперматоксикозник, пубертатная язва и малолетний дебил. Кстати, вот вам лорем: </div>
+  <div id='short-author-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+  <div id='author-buttons'>
+    <div class='author-button socials-button' style='left:3vw;'>
+      <span data-text="Social"></span><br>
+      <div class='author-button-text' onclick='window.open("https://steamcommunity.com/profiles/76561199236941405/", "_blank")''><span data-text="Steam"></span></div>
+      <div class='author-button-text' onclick='window.open("https://discordapp.com/users/719065074911805502/", "_blank")''><span data-text="Discord"></span></div>
+      <div class='author-button-text' onclick='window.open("https://github.com/Nazya234", "_blank")''><span data-text="Github"></span></div>
+    </div>
+    <div class='author-button projects-button' style='left:25vw;'>
+      <span data-text="Projects"></span><br>
+      <div class='author-button-text'><span data-text="Not exists"></span></div>
+    </div>
+    <div class='author-button skills-button' style='right:3vw;'>
+      <span data-text="Skills"></span><br>
+      <div class='author-button-text'><span data-text="Skills of being dumb"></span></div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

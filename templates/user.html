@@ -1,0 +1,50 @@
+{% extends 'main.html' %}
+
+{% block stylesheet %}
+<!--Extra stylesheet-->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/me.css') }}">
+{% endblock %}
+
+
+{% block headertitle %}
+Acount
+{% endblock %}
+
+{% block mainpart %}
+
+
+<div id='ur-frame' class='frames'>
+    <span id='user-account-nick' data-text="No name"></span>
+    <span id='user-account-name' data-text="Guest"></span>
+    <span id='user-account-description' data-text="No description"></span>
+    <img id='user-account-icon' src="https://cdn.discordapp.com/embed/avatars/0.png?size=4096">
+</div>
+
+<div style='display:none;' id='edit-frame' class='frames'>
+    <span data-text="Edit" id='edit-text'></span>
+    <form id='edit-form' method="POST" action="" enctype="multipart/form-data">
+        <div class='edit-option-text'><span data-text="Banner"></span></div>
+
+        <label class="custum-file-upload" for="file">
+        
+        <div class="text">
+            <span style='font:2vh "Lilita One";' data-text="Click to upload image" id='upload-file-text'></span>
+        </div>
+            <input style='display:none' id='file' type="file"  name="file" accept="image/*" >
+        </label>
+        
+        <div class='edit-option-text'><span data-text="Description"></span></div>
+        <textarea id='about' name='about' maxlength='600' placeholder='About you'></textarea><br>
+        <div id='edit-buttons'>
+            <button class="edit-button" onclick='logout();'><span data-text="Log out"></span></button>
+            <button class="edit-button"><span data-text="Submit"></span></button>
+        </div>
+    </form>
+</div>
+
+<!--<img id='ur-banner' src="https://www.chromethemer.com/wallpapers/chromebook-wallpapers/images/960/sports-car-futuristic-mountain-sunset-chromebook-wallpaper.jpg">-->
+{% endblock %}}
+
+{% block scripts %}
+<script src="{{ url_for('static',filename='js/me.js')}}"></script>
+{% endblock %}

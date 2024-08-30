@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/community.css') }}">
+{% endblock %}
+
+{% block headertitle %}
+Community
+{% endblock %}
+
+{% block mainpart %}
+<div id='main' class="frames">
+  <ul id='message-box'></ul>
+  <div id='denying-text'>U need to be logged</div>
+</div>
+<div id='aside' class="frames">
+  <ul id='community-actions-list'>
+    <li><div onclick='window.location.href = "/users";'><span data-text="Users"></span></div></li>
+    <li><div onclick='window.location.href = "/users";'><span data-text="Users"></span></div></li>
+  </ul>
+</div>
+{% endblock %}
+  
+{% block scripts %}
+<script src="{{ url_for('static',filename='js/community.js')}}"></script>
+
+{% for message in messages %}
+<script>ShowMessage('{{message.message_text}}', '{{message.message_author_id}}').then(() => {document.getElementById('message-box').scrollTo(0, document.getElementById('message-box').scrollHeight)})</script>
+{% endfor %}
+
+{% endblock %}

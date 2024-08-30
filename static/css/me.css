@@ -1,0 +1,193 @@
+body {
+    background-image: url("https://wallpapers.com/images/featured/2k-amoled-dozdzh1ucrhzuqb4.jpg");
+    z-index:0;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.frames {
+    transition: all 0.2s ease-out;
+    position:absolute;
+    width:70vw;
+    height:calc(40vh - 100px);
+    top: calc(100px + 2.2vw);
+    left: 15vw;
+    backdrop-filter: blur(20px);
+    z-index:2;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+#ur-frame:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0 0 40px #fff;
+    backdrop-filter: blur(20px);
+    top:calc(110px + 2.2vw);
+}
+
+#user-account-icon {
+    position:absolute;
+    height:calc(36vh - 100px);
+    top:2vh;
+    left:2vh;
+    border-radius: 30px;
+}
+
+#user-account-nick {
+    position:absolute;
+    font-size:4vh;
+    font-family:Lilita One;
+    top:1vh;
+    width:calc(70vw - 40vh);
+    text-align:center;
+    right:2vh;
+    color:white;
+}
+
+#user-account-name {
+    position:absolute;
+    font-size:2vh;
+    font-family:Lilita One;
+    top:5vh;
+    width:calc(70vw - 40vh);
+    text-align:center;
+    right:2vh;
+    color:#cdcdcd;
+}
+
+#user-account-description {
+    position:absolute;
+    font-size:2vh;
+    font-family:Cuprum;
+    top:7vh;
+    width:calc(70vw - 40vh);
+    text-align:center;
+    right:2vh;
+    color:#f2f2f2;
+}
+
+#edit-frame {
+    top: calc(4.4vw + 40vh);
+    height:calc(55vh - 100px);
+    &:hover {
+        transition: all 0.2s ease-out;
+        box-shadow: 0 0 40px #fff;
+        backdrop-filter: blur(20px);
+        top:calc(4.4vw + 40vh + 10px);
+    }
+}
+
+#edit-text {
+    position:absolute;
+    font:4vh "Lilita One";
+    top:1vh;
+    width:70vw;
+    text-align:center;
+    color:white;
+}
+
+#edit-form {
+    position:absolute;
+    width:70vw;
+    height:calc(49vh - 100px);
+    top:6vh;
+}
+
+.edit-option-text {
+    transition: all 0.2s ease-out;
+    font:2vh "Lilita One";
+    margin:1vh 15vw;
+    color:#cdcdcd;
+    &:hover {
+        transition: all 0.2s ease-out;
+        color: #3f3f3f;
+    }
+    
+}
+
+#about {
+    transition: all 0.2s ease-out;
+    width:60vw;
+    height:10vh;
+    margin: 0 calc(5vw - 1.5rem);
+    resize:none;
+    font: 2vh "Cuprum";
+    border-radius: 10px;
+    padding: 0 1.5rem;
+
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 48px 35px -48px rgba(0,0,0,0.1);
+
+    &:hover {
+        transition: all 0.2s ease-out;
+
+        background-color: rgba(255, 255, 255, 0.6);
+        box-shadow: 0px 48px 35px 20px rgba(0,0,0,0.1);
+    }
+}
+
+#edit-buttons {
+    position:absolute;
+    width:60vw;
+    left:5vw;
+    bottom:1vh;
+}
+
+.edit-button {
+    transition: all 0.2s ease-out;
+    margin: 1vh 1vw 0 1vw;
+    width: 27vw;
+    color:#cdcdcd;
+    border: 2px dashed #cacaca;
+    height: 4vh;
+    border-radius:30px;
+    background-color: rgba(255, 255, 255, 0.3);
+    font:3vh "Lilita One";
+    
+    &:hover {
+        transition: all 0.2s ease-out;
+        box-shadow: 0 0 40px #fff;
+        background-color: rgba(255, 255, 255, 0.6);
+        color:#3f3f3f;
+    }
+}
+
+.custum-file-upload {
+    transition: all 0.2s ease-out;
+    height: 7vh;
+    width: 60vw;
+    display: flex;
+    margin: 0 calc(5vw - 1.5rem);
+    flex-direction: column;
+    align-items: space-between;
+    gap: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #cacaca;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 48px 35px -48px rgba(0,0,0,0.1);
+
+
+    & .text span {
+        transition: all 0.2s ease-out;
+        font-weight: 400;
+        color: #dfdfdf;
+    }
+    
+    &:hover {
+        transition: all 0.2s ease-out;
+        box-shadow: 0px 48px 35px 20px rgba(0,0,0,0.1);
+        background-color: rgba(255, 255, 255, 0.6);
+
+        & .text span {
+            transition: all 0.2s ease-out;
+            color: #3f3f3f;
+        }
+    }
+}

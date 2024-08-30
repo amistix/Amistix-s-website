@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css')}}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico')}}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Amistix's website">
+    <meta property="og:description" content="My first own website!">
+    <meta property="og:image" content="/static/images/moxxie.jpg">
+    
+    {% block stylesheet %}{% endblock %}
+    
+    <title>Amistix's website</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+    
+  </head>
+  <body>
+    <div id='loader' class='loader-container'>
+      <div class="loader"></div>
+    </div>
+
+    <div id='header'>
+      <span data-text= "{% block headertitle %}{% endblock %}"></span>
+      <div style='display:none;' id='user-frame' onclick="window.open('/me','_self')">
+        <span id='user-nick' data-text=""></span>
+        <span id='user-name' data-text=""></span>
+        <img style="display: none;" id='user-avatar'>
+      </div>
+      <button id='discord-login-button' onclick="window.open('https://discord.com/oauth2/authorize?client_id=1234546383327989771&response_type=token&redirect_uri=https%3A%2F%2Fdc09cd3a-2407-4b5a-b534-44738a654d9b-00-2jfwg2qr34xuh.worf.replit.dev&scope=email+identify','_self')">Discord</button>
+    </div>
+    <div id='banner-color' style="display:none;"></div>
+     <div id='user-id' style="display:none;"></div>
+    
+    {% block mainpart%}{% endblock %}
+    <div id='menu'>
+      <div id='page-mark' class='page-mark'><span data-text='MENU'></span></div>
+      <div onclick='window.location.href = "/author";' class='menu-button creator-page'><span data-text="Author info"></span></div> 
+      <div onclick='window.location.href = "/me";' class='menu-button acount-page'><span data-text="Acount"></span></div> 
+      <div onclick='window.location.href = "/community";'class='menu-button community-page'><span data-text="Community"></span></div> 
+      <div onclick='window.location.href = "/users";'class='menu-button users-page'><span data-text="Users"></span></div>
+      <div onclick='window.location.href = "/entertainment";' class='menu-button entertainment-page'><span data-text="Fun"></span></div> 
+      <div onclick='window.location.href = "/extra";'class='menu-button extra-page'><span data-text="Extra"></span></div>
+    </div>
+    <script src="{{ url_for('static',filename='js/main.js')}}"></script>
+    <script src="{{ url_for('static',filename='js/authorization.js')}}"></script>
+    {% block scripts %}{% endblock %}
+    
+  </body>
+</html>

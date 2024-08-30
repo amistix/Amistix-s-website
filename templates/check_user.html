@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+
+{% block stylesheet %}
+<!--Extra stylesheet-->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/user.css') }}">
+{% endblock %}
+
+{% block headertitle %}
+User
+{% endblock %}
+
+{% block mainpart %}
+<div id='user-account-frame'>
+    <span id='user-account-nick' data-text="{{user.user_nick}}"></span>
+    <span id='user-account-name' data-text="{{user.user_name}}"></span>
+    <span id='user-account-description' data-text="{{user.user_description}}"></span>
+    <img id='user-account-icon' src="{{user.user_icon}}">
+</div>
+<!--<img id='user-account-banner' src="">-->
+{% endblock %}
+
+{% block scripts %}
+<script>
+  //document.getElementById('user-account-banner').src = `/static/users/banners/{{user.user_id}}.gif`
+    document.body.style.backgroundImage = "url('/static/users/banners/{{user.user_id}}.gif')";
+</script>
+{% endblock %}

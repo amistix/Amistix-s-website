@@ -1,0 +1,71 @@
+body {
+    background-image: url("https://wallpapers.com/images/featured/2k-amoled-dozdzh1ucrhzuqb4.jpg");
+    z-index:0;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+#user-account-frame {
+    transition: all 0.2s ease-out;
+    position:absolute;
+    width:70vw;
+    height:calc(40vh - 100px);
+    /*top: calc(100px + 2.2vw);*/
+    top:calc((60vh - 100px) / 2);
+    left: 15vw;
+    backdrop-filter: blur(10px);
+    z-index:2;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.4);
+
+    &:hover {
+        transition: all 0.2s ease-out;
+        box-shadow: 0 0 40px #fff;
+        backdrop-filter: blur(20px);
+        top:calc((60vh - 100px) / 2 + 10px);
+    }
+}
+
+#user-account-icon {
+    position:absolute;
+    height:calc(36vh - 100px);
+    top:2vh;
+    left:2vh;
+    border-radius: 30px;
+}
+
+#user-account-nick {
+    position:absolute;
+    font-size:4vh;
+    font-family:Lilita One;
+    top:1vh;
+    width:calc(70vw - 40vh);
+    text-align:center;
+    right:2vh;
+    color:white;
+}
+
+#user-account-name {
+    position:absolute;
+    font-size:2vh;
+    font-family:Lilita One;
+    top:5vh;
+    width:calc(70vw - 40vh);
+    text-align:center;
+    right:2vh;
+    color:#cdcdcd;
+}
+
+#user-account-description {
+    position:absolute;
+    font-size:2vh;
+    font-family:Cuprum;
+    top:7vh;
+    width:calc(70vw - 40vh);
+    text-align:center;
+    right:2vh;
+    color:#f2f2f2;
+}

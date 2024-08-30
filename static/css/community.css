@@ -1,0 +1,202 @@
+body {
+    background-image: url("https://wallpapers.com/images/featured/2k-amoled-dozdzh1ucrhzuqb4.jpg");
+    z-index:0;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.frames {
+  transition: all 0.2s ease-out;
+  
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(30px);
+
+  &:hover {
+      transition: all 0.2s ease-out;
+
+      box-shadow: 0 0 10px #fff;
+      backdrop-filter: blur(50px);
+  }
+}
+
+
+#main {
+  position:absolute;
+  top:calc(100px + 1vh);
+  left: 1vw;
+  
+  width: 70vw;
+  height: calc(100vh - 105px - 2vh);
+  
+  border-radius: 30px;
+  
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+
+#message-box {
+  margin: 0.5% 1vw;
+  
+  width: 68vw;
+  height: 90%;
+  
+  border-radius: 30px;
+  
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+
+#entry {
+  transition: all 0.2s ease-out;
+  
+  position:absolute;
+  bottom:0;
+  margin: 0 0 0.5% 1vw;
+  
+  width: 68vw;
+  height: calc(6% - 4px);
+  
+  font: 40px "Cuprum";
+  text-indent: 20px;
+  
+  border: 2px dashed #cacaca;
+  border-radius: 30px;
+
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 48px 35px -48px rgba(0,0,0,0.1);
+
+  &:hover {
+    transition: all 0.2s ease-out;
+    
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 48px 35px 20px rgba(0,0,0,0.1);
+  }
+}
+
+::placeholder {
+  opacity:60%;
+  font: bold 70% "Cuprum";
+  color: #3f3f3f;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.message {
+  transition: all 0.2s ease-out;
+
+  display: flex;
+  margin: 0.2% 2%;
+  padding: 1% 1%;
+
+  width: 94%;
+
+  font: 30px "Cuprum";
+  line-height: 1.375rem;
+  
+  border-radius: 10px;
+
+  background-color: rgba(255, 255, 255, 0);
+
+  &:hover {
+    transition: all 0.2s ease-out;
+
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.user{
+  transition: all 0.2s ease-out;
+  
+  color:black;
+  user-select:none;
+  font: bold 30px "Cuprum";
+  vertical-align: top;
+  
+  cursor: pointer;
+  
+  &:hover {
+    transition: all 0.2s ease-out;
+  
+    text-decoration: underline;
+    color:white;
+  }
+}
+
+.user-img{
+  margin-right: 1%;
+  
+  width:3vw;
+  height:3vw;
+
+  user-select:none;
+
+  border-radius:10px;
+}
+
+.mess {
+  width:93%;
+  max-width:93%;
+  line-height: 30px;
+}
+
+.message-body {
+  display: grid;
+  
+  width:93%;
+  max-width:93%;
+}
+
+
+#aside {
+  position:absolute;
+  top:calc(100px + 1vh);
+  right: 1vw;
+  
+  width: 27vw;
+  height: calc(100vh - 105px - 2vh);
+  
+  border-radius: 30px;
+  
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+
+#community-actions-list {
+  padding: 1vh 0 0 0;
+  
+  width:100%;
+  height:100%;
+
+  list-style-type: none;
+
+  & li {
+    transition: all 0.2s ease-out;
+    
+    margin:1% 5%;
+
+    width: 90%;
+
+    font: 3vh "Lilita One";
+    text-align: center;
+
+    border: 2px dashed #cacaca;
+    border-radius: 30px;
+
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 48px 35px -48px rgba(0,0,0,0.1);
+
+    &:hover {
+      transition: all 0.2s ease-out;
+
+      color: #2f2f2f;
+
+      background-color: rgba(255, 255, 255, 0.6);
+      box-shadow: 0px 48px 35px 20px rgba(0,0,0,0.1);
+    }
+  }
+}

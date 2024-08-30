@@ -28,7 +28,7 @@
         <span id='user-name' data-text=""></span>
         <img style="display: none;" id='user-avatar'>
       </div>
-      <button id='discord-login-button' onclick="window.open('https://discord.com/oauth2/authorize?client_id=1234546383327989771&response_type=token&redirect_uri=https%3A%2F%2Fdc09cd3a-2407-4b5a-b534-44738a654d9b-00-2jfwg2qr34xuh.worf.replit.dev&scope=email+identify','_self')">Discord</button>
+      <button id='discord-login-button' onclick="getAuth()">Discord</button>
     </div>
     <div id='banner-color' style="display:none;"></div>
      <div id='user-id' style="display:none;"></div>
@@ -43,6 +43,11 @@
       <div onclick='window.location.href = "/entertainment";' class='menu-button entertainment-page'><span data-text="Fun"></span></div> 
       <div onclick='window.location.href = "/extra";'class='menu-button extra-page'><span data-text="Extra"></span></div>
     </div>
+    <script>
+      function getAuth(){
+        window.location.href = `https://discord.com/oauth2/authorize?client_id=1234546383327989771&response_type=token&redirect_uri=${window.location.origin.replaceAll("/","%2F").replaceAll(":","%3A")}%2F&scope=email+identify`
+      }   
+    </script>
     <script src="{{ url_for('static',filename='js/main.js')}}"></script>
     <script src="{{ url_for('static',filename='js/authorization.js')}}"></script>
     {% block scripts %}{% endblock %}

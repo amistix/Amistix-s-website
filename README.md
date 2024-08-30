@@ -21,6 +21,8 @@ It's my website that i've started to code as pet project. So that's actually my 
   ```
   python main.py
   ```
+
+  <li>Open <a href="http://192.168.1.148:8080/">localhost:8080</a></li>
 </ul>
 
 ## Should i re-write it in Sveltekit?🤔 Maybe
